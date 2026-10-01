@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors — semantic tokens, not decorative names */
+  --color-navy: #052f5f;
+  --color-navy-hover: #03203f;
+  --color-yale: #005377;
+  --color-yale-hover: #003c56;
+  --color-seaweed: #06a77d;
+  --color-seaweed-hover: #058a68;
+  --color-sand: #d5c67a;
+  --color-orange: #f1a208;
+  --color-orange-hover: #d38f00;
+
+  --color-background: #ffffff;
+  --color-background-subtle: #f6f8fa;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+
+  --color-foreground: #0e1b2b;
+  /* Body copy neutral — deliberately darker than a typical "gray-500" so
+     descriptive text stays confidently legible instead of washed out. */
+  --color-foreground-secondary: #34465a;
+  --color-foreground-muted: #667789;
+  --color-foreground-inverse: #ffffff;
+
+  --color-border: #d9e1e8;
+  --color-border-subtle: #e9eef2;
+
+  --color-focus: #005377;
+
+  /* Typography scale — restrained, industrial. Weight applied per-use via font-medium/semibold/bold. */
+  /* Homepage Hero only — deliberately larger than any inner-page heading. */
+  --text-display: 3.75rem;
+  --text-display--line-height: 1.05;
+  --text-display-sm: 2.25rem;
+  --text-display-sm--line-height: 1.1;
+
+  --text-h1: 3rem;
+  --text-h1--line-height: 1.1;
+  --text-h2: 2.125rem;
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.375rem;
+  --text-h3--line-height: 1.25;
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1.35;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.65;
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.5;
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.4;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.4;
+
+  /* Shadows — restrained, tinted with brand navy instead of pure black */
+  --shadow-subtle: 0 1px 2px 0 rgb(5 47 95 / 0.06);
+  --shadow-card: 0 2px 6px 0 rgb(5 47 95 / 0.08), 0 1px 2px 0 rgb(5 47 95 / 0.04);
+  --shadow-elevated: 0 8px 20px -4px rgb(5 47 95 / 0.12), 0 2px 6px 0 rgb(5 47 95 / 0.06);
+
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --container-page: 1280px;
+  --container-narrow: 720px;
+  --container-wide: 1440px;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Visible focus state for keyboard navigation across the site */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
